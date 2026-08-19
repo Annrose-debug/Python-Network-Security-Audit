@@ -1,26 +1,10 @@
-+-----------------------------------------------------------------+
-|                       Python Audit Engine                       |
-+-----------------------------------------------------------------+
-|
-+------------------------+------------------------+
-|                                                 |
-v                                                 v
-+-------------------------------+       +-------------------------------+
-|    Resource Telemetry Engine  |       |   Multi-Threaded Port Scanner |
-|    (CPU, RAM, Disk, Netstat)  |       |   (Socket Connection & Banner)|
-+-------------------------------+       +-------------------------------+
-|                                                 |
-+------------------------+------------------------+
-|
-v
-+-----------------------------------------------------------------+
-|                    HTML Report Generator                        |
-|             (Generates audit-report.html)                       |
-+-----------------------------------------------------------------+
-
-
----
-
+```mermaid
+flowchart TD
+    A[Python Audit Engine] --> B[Resource Telemetry Engine\n(CPU, RAM, Disk, Netstat)]
+    A --> C[Multi-Threaded Port Scanner\n(Socket Connection & Banner)]
+    B --> D[HTML Report Generator\n(Generates audit-report.html)]
+    C --> D
+```
 ## 🛠 Script Components & Modules
 
 | Module / Function | Technical Implementation | Purpose |
