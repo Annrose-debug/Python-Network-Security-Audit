@@ -1,0 +1,52 @@
+{
+    "audit_metadata": {
+        "timestamp": "2026-08-19T11:44:26.072541",
+        "target_host": "127.0.0.1",
+        "scan_duration_seconds": 16.24,
+        "sha256_hash": "d238e571e7764fd5e6392fd0219e8dc5eb9818f2935ff1c6bbf7c057a1fe4db3"
+    },
+    "system_metrics": {
+        "timestamp": "2026-08-19T11:44:09.814611",
+        "cpu_percent": 27.7,
+        "ram_percent": 93.9,
+        "ram_used_gb": 7.42,
+        "ram_total_gb": 7.89,
+        "disk_percent": 81.9,
+        "disk_free_gb": 43.06,
+        "system_status": "WARNING",
+        "alerts": [
+            "High RAM Utilization: 93.9%"
+        ]
+    },
+    "network_latency": {
+        "target": "8.8.8.8",
+        "status": "REACHABLE",
+        "latency_ms": 13.6
+    },
+    "security_findings": [
+        {
+            "port": 135,
+            "service": "RPC",
+            "risk_level": "HIGH",
+            "description": "Microsoft RPC Endpoint Mapper. High attack surface."
+        },
+        {
+            "port": 445,
+            "service": "SMB",
+            "risk_level": "CRITICAL",
+            "description": "Server Message Block. Target for lateral movement & ransomware."
+        },
+        {
+            "port": 902,
+            "service": "UNKNOWN",
+            "risk_level": "LOW",
+            "description": "Unrecognized or custom service listening."
+        },
+        {
+            "port": 912,
+            "service": "UNKNOWN",
+            "risk_level": "LOW",
+            "description": "Unrecognized or custom service listening."
+        }
+    ]
+}

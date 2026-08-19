@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise Security & Network Audit</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header { background: #1e293b; padding: 20px; border-radius: 8px; border-left: 6px solid #3b82f6; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .card { background: #1e293b; padding: 15px; border-radius: 8px; border: 1px solid #334155; }
+        .card h3 { margin-top: 0; font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; }
+        .card .metric { font-size: 1.8rem; font-weight: bold; color: #38bdf8; }
+        table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #334155; }
+        th { background: #334155; color: #f1f5f9; text-transform: uppercase; font-size: 0.8rem; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.75rem; }
+        .badge.critical { background: #ef4444; color: white; }
+        .badge.high { background: #f97316; color: white; }
+        .badge.medium { background: #eab308; color: black; }
+        .badge.low { background: #3b82f6; color: white; }
+        .badge.info { background: #10b981; color: white; }
+        .hash-box { background: #020617; padding: 10px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; color: #a7f3d0; word-break: break-all; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Enterprise Network & Security Audit Suite</h2>
+            <p>Execution Timestamp: 2026-08-19T11:44:26.072541 | Host: 127.0.0.1</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>CPU Utilization</h3>
+                <div class="metric">27.7%</div>
+            </div>
+            <div class="card">
+                <h3>RAM Utilization</h3>
+                <div class="metric">93.9%</div>
+            </div>
+            <div class="card">
+                <h3>Gateway Latency</h3>
+                <div class="metric">13.6 ms</div>
+            </div>
+            <div class="card">
+                <h3>Open Ports</h3>
+                <div class="metric">4</div>
+            </div>
+        </div>
+
+        <h3>Security Port Analysis Findings</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Port</th>
+                    <th>Service</th>
+                    <th>Risk Level</th>
+                    <th>Analysis & Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            <tr>
+                <td><strong>135</strong></td>
+                <td>RPC</td>
+                <td><span class="badge high">HIGH</span></td>
+                <td>Microsoft RPC Endpoint Mapper. High attack surface.</td>
+            </tr>
+            
+            <tr>
+                <td><strong>445</strong></td>
+                <td>SMB</td>
+                <td><span class="badge critical">CRITICAL</span></td>
+                <td>Server Message Block. Target for lateral movement & ransomware.</td>
+            </tr>
+            
+            <tr>
+                <td><strong>902</strong></td>
+                <td>UNKNOWN</td>
+                <td><span class="badge low">LOW</span></td>
+                <td>Unrecognized or custom service listening.</td>
+            </tr>
+            
+            <tr>
+                <td><strong>912</strong></td>
+                <td>UNKNOWN</td>
+                <td><span class="badge low">LOW</span></td>
+                <td>Unrecognized or custom service listening.</td>
+            </tr>
+            
+            </tbody>
+        </table>
+
+        <div class="hash-box">
+            <strong>SHA-256 Report Integrity Hash:</strong><br>
+            d238e571e7764fd5e6392fd0219e8dc5eb9818f2935ff1c6bbf7c057a1fe4db3
+        </div>
+    </div>
+</body>
+</html>
